@@ -1,0 +1,41 @@
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: ghostwhite;
+}
+
+tbody tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.table-header {
+  text-align: left;
+}
+
+.table-row-cell {
+  text-align: left;
+}
+
+.table-row:hover {
+  filter: brightness(85%);
+}
+
+.table-row--selectable {
+  cursor: pointer;
+}
+.table-row--selected {
+  filter: brightness(75%);
+}
+
+.table-header-spacer {
+  width: 100px;
+}
