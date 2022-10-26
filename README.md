@@ -7,7 +7,7 @@ It takes in a static list of json attributes and renders them according to custo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run (after `npm i`:
 
 ### `npm start`
 
