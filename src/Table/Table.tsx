@@ -52,7 +52,7 @@ export const Table = <T extends TableItem>({
               checked={allSelected}
             ></input>
           </td>
-          <td data-testid="numberSelected">
+          <td data-testid="numberSelected" className="table-selected-statement">
             {numberSelected === 0
               ? "None Selected"
               : `${numberSelected} Selected`}
@@ -62,6 +62,9 @@ export const Table = <T extends TableItem>({
               onClick={onDownload}
               disabled={numberSelected === 0}
               type="button"
+              className={`${
+                numberSelected !== 0 ? "table-download-active" : ""
+              }`}
               data-testid="downloadButton"
             >
               Download Selected
@@ -77,7 +80,7 @@ export const Table = <T extends TableItem>({
               data-testid="column"
               className="tables-header"
               style={{
-                width: col.width ? col.width : 100,
+                minWidth: col.width ? col.width : 100,
               }}
             >
               {col.header}

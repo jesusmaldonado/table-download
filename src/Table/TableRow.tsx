@@ -35,7 +35,11 @@ export const TableRow = <T extends TableItem>({
       {columns.map((column, key) => {
         if (customRenderers[column.key]) {
           return (
-            <td data-testid="custom-renderer" key="status">
+            <td
+              data-testid="custom-renderer"
+              key="status"
+              className="table-row-cell"
+            >
               {customRenderers[column.key](row)}
             </td>
           );

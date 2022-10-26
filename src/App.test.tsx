@@ -8,7 +8,6 @@ describe("table for files", () => {
   it("renders all fields headers", () => {
     render(<App />);
     const columnDisplayValues = columns.map((col) => col.header);
-    const columnWidths = columns.map((col) => col.header);
     const columnElements = screen.getAllByTestId("column");
     for (let i = 0; i < columnElements.length; i++) {
       const columnElement = columnElements[i];
@@ -26,7 +25,7 @@ describe("table for files", () => {
       const columnElement = columnElements[i];
       const columnWidth = columnWidths[i];
       const expectation = columnWidth ? `${columnWidth}px` : "100px";
-      expect(columnElement.style.width).toMatch(expectation);
+      expect(columnElement.style.minWidth).toMatch(expectation);
     }
   });
 
