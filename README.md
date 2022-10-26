@@ -3,6 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 It takes in a static list of json attributes and renders them according to custom renderers.
 
+![Image of Files Table with a List of Files](sample.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
