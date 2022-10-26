@@ -16,6 +16,7 @@ export type StringKeys<T> = Extract<keyof T, string>;
 interface CustomRenderer<T> {
   [field: string]: (item: T) => string;
 }
+
 export interface TableProps<T extends TableItem> {
   columns: Array<Column<T>>;
   data: Array<T>;
@@ -26,7 +27,9 @@ export interface TableProps<T extends TableItem> {
 }
 
 export type PrimitiveType = string | number | boolean;
+
 export type FileKeys = Extract<keyof File, string>;
+
 export interface TableItem {
   selectable: boolean;
   selected: boolean;
