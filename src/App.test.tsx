@@ -70,7 +70,7 @@ describe("table for files", () => {
     }
   });
   describe("when selecting", () => {
-    it("only updates active elements", () => {
+    it("only updates active elements and keeps track of the correct checkbox state", () => {
       render(<App />);
       const countEl = screen.getByTestId("numberSelected");
       expect(countEl.textContent).toMatch("None Selected");
